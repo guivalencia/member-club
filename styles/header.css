@@ -1,11 +1,7 @@
-body{
-    background-color: var(--gray-200);
-}
-
 header{
     width: 100%;
     display: flex;
-    margin-top: 64px;
+    margin-top: 4rem;
     align-items: center;
     justify-content: center;
 }
