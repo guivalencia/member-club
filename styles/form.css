@@ -6,24 +6,47 @@ form{
     justify-content: center;
 }
 
-input{
+#div-input{
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: .5rem .5rem .5rem 1rem;
     gap: .75rem;
 
-    position: absolute;
+    position: relative;
     width: 25rem;
     height: 3.5rem;
-    left: calc(50% - 25rem/2);
-    top: 9.5rem;
 
     background: var(--gray-300);
 
     border: 1px solid var(--gray-400);
     border-radius: .75rem;
-
-    font: var(--text-md);
+    /* outline: .100rem solid var(--pink); */
 }
 
+input{
+    background: none;
+    border: none;
+    border-radius: .75rem;
+    position: absolute;
+    width: 20rem;
+    height: 3.5rem;
+    left: calc(50% - 25rem/2);
+    padding: .5rem .5rem .5rem 1rem;
+    gap: .75rem;
+    font: var(--text-md);
+    outline: none;
+}
+
+input:focus{
+    caret-color: var(--pink);
+}
+
+#submit{
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    right: .5rem;
+    /* background-color: var(--gray-400); */
+    border-radius: .75rem;
+}
