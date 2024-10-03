@@ -1,3 +1,7 @@
+body{
+    background-color: var(--gray-200);
+}
+
 header{
     width: 100%;
     display: flex;
