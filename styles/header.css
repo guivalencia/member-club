@@ -10,3 +10,10 @@ header{
     width: 116px;
     height: 56px;
 }
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
