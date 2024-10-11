@@ -8,6 +8,8 @@
     gap: 32px;
     isolation: isolate;
 
+    position: relative;
+
     width: 568px;
     height: 333px;
 
@@ -75,11 +77,15 @@ article section {
 }
 
 #historico {
+    /* History */
+
+    box-sizing: border-box;
+
     /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 28px 28px 24px 24px;
+    padding: 28px 0px 0px 24px;
     margin-top: 1rem;
     gap: 16px;
     isolation: isolate;
@@ -98,6 +104,24 @@ article section {
     order: 1;
     align-self: stretch;
     flex-grow: 0;
+
+    overflow-y: scroll;
+
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background-color: var(--gray-300);
 }
 
 #picture {
@@ -122,12 +146,355 @@ article section {
     /* z-index: 1; */
 }
 
-.text-sm{
-    font:  600 0.875rem/1.4 var(--font-family);
+.text-sm {
+    font: 600 0.875rem/1.4 var(--font-family);
     color: var(--gray-600);
 }
 
-.text-xs{
-    font: 500 0.75rem/1.4 var(--font-family);
+.text-xs {
+    font: 400 0.75rem/1.4 var(--font-family);
     color: var(--gray-500);
+}
+
+.expense {
+    display: flex;
+    align-items: center;
+    height: 38px;
+}
+
+.expense>div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.expense-info strong {
+    font: var(--subtitle-sm);
+    /* identical to box height, or 17px */
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    /* Base/Gray-600 */
+    color: #4A4448;
+
+}
+
+.expense-info span {
+    /* Body/Text Xs */
+    font: var(--text-xs);
+    /* identical to box height, or 17px */
+    display: flex;
+    align-items: center;
+
+    /* Base/Gray-500 */
+    color: #756C71;
+}
+
+.remove-icon {
+    /* Icon */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    gap: 8px;
+
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+
+    background: rgba(69, 180, 66, 0.12);
+    border-radius: 999px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+#historico>ul {
+    /* List */
+
+    /* box-sizing: border-box; */
+    list-style: none;
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0px 0px;
+    gap: 12px;
+
+    width: 268px;
+    height: 364px;
+
+    /* Base/Gray-200 */
+    border-top: 1px solid #E9E7E9;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 1;
+
+    /* overflow-y: scroll; */
+
+}
+
+#historico>div:first-child {
+    /* Header */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 268px;
+    height: 17px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 0;
+
+    & p {
+
+        /* Heading/Subtitle Sm */
+        font-family: 'Oxygen';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 140%;
+        /* identical to box height, or 17px */
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+        /* Base/Gray-500 */
+        color: #756C71;
+    }
+
+    & span {
+        /* Body/Text Xs */
+        font: var(--text-xs);
+        /* identical to box height, or 17px */
+        display: flex;
+        align-items: center;
+
+        /* Base/Gray-500 */
+        color: #756C71;
+
+
+        /* Inside auto layout */
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+    }
+
+}
+
+.card-first {
+    /* Header */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+
+    width: 306px;
+    height: 41px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+
+    & h4 {
+        /* Cartão Fidelidade */
+
+        /* width: 119px; */
+        /* height: 17px; */
+
+        /* Heading/Subtitle Sm */
+        font-family: 'Oxygen';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 140%;
+        /* identical to box height, or 17px */
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+        /* Base/Gray-500 */
+        color: #756C71;
+
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+
+    & p {
+        /* Ao fazer cortes de cabelo, o décimo sai de graça! */
+
+        width: 306px;
+        height: 20px;
+
+        /* Body/Text Sm */
+        font-family: 'Oxygen';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        /* identical to box height, or 20px */
+        display: flex;
+        align-items: center;
+
+        /* Base/Gray-500 */
+        color: #756C71;
+
+
+        /* Inside auto layout */
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+    }
+}
+
+.card-second {
+    /* ID Tag */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+    gap: 8px;
+
+    position: absolute;
+    width: 149px;
+    height: 32px;
+    right: 32px;
+    top: 32px;
+
+    /* Base/Gray-300 */
+    background: #DFDCDF;
+    border-radius: 999px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
+
+    & p {
+        /* ID: 124-537-835-230 */
+
+        width: 125px;
+        height: 20px;
+
+        /* Heading/Subtitle Md */
+        font-family: 'Oxygen';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 140%;
+        /* identical to box height, or 20px */
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+        /* Base/Gray-500 */
+        color: #756C71;
+
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+}
+
+.card-third {
+    /* Slots */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    width: 504px;
+    height: 192px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 1;
+
+}
+
+.card-third>div {
+    /* Item */
+
+    width: 88px;
+    height: 88px;
+
+    /* Base/Gray-200 */
+    background: #E9E7E9;
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 20px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.check {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: calc(50% - 64px/2);
+    top: calc(50% - 64px/2);
+}
+
+.gift {
+    /* Icons */
+
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: calc(50% - 40px/2);
+    top: calc(50% - 40px/2);
+
+    opacity: 0.35;
+
 }
