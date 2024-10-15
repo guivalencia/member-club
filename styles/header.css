@@ -1,4 +1,4 @@
-header{
+header {
     width: 100%;
     display: flex;
     margin-top: 4rem;
@@ -6,14 +6,17 @@ header{
     justify-content: center;
 }
 
-#logo{
+#logo {
     width: 116px;
     height: 56px;
 }
 
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4rem;
+@media (width >=375px) {
+    #logo {
+        position: absolute;
+        width: 99.43px;
+        height: 48px;
+        left: calc(50% - 99.43px/2 + 0.21px);
+        top: 32px;
+    }
 }
