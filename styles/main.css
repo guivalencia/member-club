@@ -456,7 +456,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0px 6.69rem 0px 0px;
+    /* padding: 0px 6.69rem 0px 0px; */
     gap: 0.5rem;
 
     width: 351px;
@@ -469,7 +469,7 @@ main {
     &::after {
         /* Progress indicator */
         content: "";
-        width: 243.3px;
+        width: 70%;
         height: 8px;
 
         /* Main/Gradient */
@@ -530,8 +530,8 @@ main {
         grid-template-areas:
             "A"
             "C"
-            "B"
-            "D";
+            "D"
+            "B";
         left: calc(50% - 351px/2);
         position: absolute;
 
@@ -580,6 +580,221 @@ main {
     #card {
         width: 351px;
         height: 239px;
+        padding: 1.5rem 1.25rem 1.25rem 1.25rem;
         margin-left: 0;
+    }
+
+    .card-first {
+        /* Frame 4 */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 10px;
+
+        width: 311px;
+        height: 55px;
+
+        & p {
+            width: 172px;
+            font: var(--text-xs);
+        }
+    }
+
+    .card-second {
+        width: 123px;
+        height: 24px;
+        right: 1.25rem;
+        top: 1.5rem;
+
+        & p {
+            width: 107px;
+            height: 17px;
+
+            font: var(--subtitle-sm);
+        }
+    }
+
+    .card-third {
+        /* Slots */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        padding: 0px;
+        gap: 8px;
+
+        width: 312px;
+        height: 120px;
+
+    }
+
+    .card-third>div {
+        /* Item */
+
+        width: 56px;
+        height: 56px;
+
+        /* Base/Gray-200 */
+        background: #E9E7E9;
+        backdrop-filter: blur(3.14362px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 12.5745px;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+
+    .check {
+        /* PinCheck */
+
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: calc(50% - 40px/2 + 0px);
+        top: calc(50% - 40px/2);
+
+
+    }
+
+    #spin {
+        /* Progress */
+
+        box-sizing: border-box;
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 16px 20px;
+        margin-left: 0;
+
+        width: 351px;
+        height: 88px;
+    }
+
+    .cont-spin {
+        /* Content */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 4px;
+
+        width: 231px;
+        height: 46px;
+    }
+
+    .cont-spin>div:first-child {
+        /* 3 cortes restantes */
+
+        width: 231px;
+        height: 25px;
+        gap: .3rem;
+
+        /* Heading md */
+        font: var(--title-md);
+
+        & h2 {
+            font: var(--title-sm);
+            color: var(--gray-600);
+        }
+
+        & p {
+            font: var(--text-sm);
+            color: var(--gray-500);
+        }
+    }
+
+    .div-spin {
+        /* LinearProgress */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 12px;
+
+        width: 231px;
+        height: 17px;
+
+    }
+
+    .barr-spin {
+        /* Bar */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* padding: 0px 107.7px 0px 0px; */
+        gap: 8px;
+
+        width: 182px;
+        height: 8px;
+
+        &::after {
+            width: 70%;
+            height: 8px;
+        }
+    }
+
+    .div-gift {
+        /* Item */
+
+        width: 56px;
+        height: 56px;
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+    }
+
+    .spin-gift {
+        /* PinGift */
+
+        position: absolute;
+        width: 40px;
+        /* height: 40px; */
+        left: calc(50% - 40px/2);
+        top: calc(50% - 45px/2);
+    }
+
+    #historico {
+        width: 351px;
+        height: 441px;
+    }
+
+    #historico>div:first-child {
+        width: 311px;
+        height: 17px;
+
+        & p {
+            font: var(--subtitle-sm);
+        }
+
+        & span {
+            font: var(--text-xs);
+        }
+    }
+
+    #historico>ul {
+        width: 311px;
+        height: 364px;
     }
 }
