@@ -21,8 +21,17 @@ form {
 
     border: 1px solid var(--gray-400);
     border-radius: .75rem;
-    /* outline: .100rem solid var(--pink); */
+
+    &&:focus-within{
+        outline: .100rem solid var(--pink);
+    }
+
+    &&:focus-within{
+        caret-color: var(--pink);
+    }
 }
+
+
 
 input {
     background: none;
@@ -36,10 +45,8 @@ input {
     gap: .75rem;
     font: var(--text-md);
     outline: none;
-}
 
-input:focus {
-    caret-color: var(--pink);
+    
 }
 
 #submit {
@@ -49,6 +56,11 @@ input:focus {
     right: .5rem;
     /* background-color: var(--gray-400); */
     border-radius: .75rem;
+    background-image: url(../assets/icons/enter-disabled.svg);
+
+    &&:hover{
+        background-image: url(../assets/icons/enter-hover.svg);
+    }
 }
 
 @media (width <=375px) {
