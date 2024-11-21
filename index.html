@@ -2,196 +2,68 @@
 <html lang="pt-BR">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <meta name="description" content="Participe da promoção e ganhe cortes gratuitos.">
+    <title>Promoção de Fidelidade</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
+    <!-- Cabeçalho com o logotipo -->
     <header>
-        <img id="logo" src="assets/Logo.png" alt="">
+        <img id="logo" src="assets/Logo.png" alt="Logo da empresa">
     </header>
 
-    <form action="">
+    <!-- Formulário para entrada do ID do cartão -->
+    <div class="form">
         <div id="div-input">
-            <input type="text" placeholder="ID do cartão" required>
-
-            <img id="submit" alt="">
+            <input type="text" placeholder="Digite o ID do seu cartão">
+            <img id="submit" alt="" onclick="imgClick()">
         </div>
-    </form>
+    </div>
 
     <main>
-        <section>
+        <!-- Seção de informações -->
+        <section id="sec1">
             <div id="info">
-                <div id="picture">
-                    <img src="assets/images.jpeg" alt="">
-                </div>
-
-                <div>
-                    <p class="text-sm">Natália Miranda</p>
-                    <p class="text-xs">Cliente desde 18/09/2023</p>
-                </div>
+                <!-- Informações dinâmicas serão inseridas aqui -->
             </div>
         </section>
 
-        <section>
-            <div id="historico">
-                <div>
-                    <p>histórico</p>
-                    <span>7 cortes</span>
-                </div>
-                <ul>
-                    <li class="cut">
-                        <div class="cut-info">
-                            <strong>29/04/2024</strong>
-                            <span>18:30</span>
-                        </div>
-
-                        <img src="assets/icons/check.svg" alt="remover" class="cut-icon" />
-                    </li>
-                    <li class="cut">
-                        <div class="cut-info">
-                            <strong>29/04/2024</strong>
-                            <span>18:30</span>
-                        </div>
-
-                        <img src="assets/icons/check.svg" alt="remover" class="cut-icon" />
-                    </li>
-                    <li class="cut">
-                        <div class="cut-info">
-                            <strong>29/04/2024</strong>
-                            <span>18:30</span>
-                        </div>
-
-                        <img src="assets/icons/check.svg" alt="remover" class="cut-icon" />
-                    </li>
-                    <li class="cut">
-                        <div class="cut-info">
-                            <strong>29/04/2024</strong>
-                            <span>18:30</span>
-                        </div>
-
-                        <img src="assets/icons/check.svg" alt="remover" class="cut-icon" />
-                    </li>
-                    <li class="cut">
-                        <div class="cut-info">
-                            <strong>29/04/2024</strong>
-                            <span>18:30</span>
-                        </div>
-
-                        <img src="assets/icons/check.svg" alt="remover" class="cut-icon" />
-                    </li>
-                    <li class="cut">
-                        <div class="cut-info">
-                            <strong>29/04/2024</strong>
-                            <span>18:30</span>
-                        </div>
-
-                        <img src="assets/icons/check.svg" alt="remover" class="cut-icon" />
-                    </li>
-                    <li class="cut">
-                        <div class="cut-info">
-                            <strong>29/04/2024</strong>
-                            <span>18:30</span>
-                        </div>
-
-                        <img src="assets/icons/check.svg" alt="remover" class="cut-icon" />
-                    </li>
-                    <li class="cut">
-                        <div class="cut-info">
-                            <strong>29/04/2024</strong>
-                            <span>18:30</span>
-                        </div>
-
-                        <img src="assets/icons/check.svg" alt="remover" class="cut-icon" />
-                    </li>
-                    <li class="cut">
-                        <div class="cut-info">
-                            <strong>29/04/2024</strong>
-                            <span>18:30</span>
-                        </div>
-
-                        <img src="assets/icons/check.svg" alt="remover" class="cut-icon" />
-                    </li>
-                    <li class="cut">
-                        <div class="cut-info">
-                            <strong>29/04/2024</strong>
-                            <span>18:30</span>
-                        </div>
-
-                        <img src="assets/icons/check.svg" alt="remover" class="cut-icon" />
-                    </li>
-                </ul>
+        <!-- Seção do histórico -->
+        <section id="sec2">
+            <div id="hist">
+                <!-- Histórico dinâmico será inserido aqui -->
             </div>
         </section>
 
-        <section>
+        <!-- Seção do cartão -->
+        <section id="sec3">
             <div id="card">
-                <div class="card-first">
-                    <h4>CARTÃO FIDELIDADE</h4>
-                    <p>Ao fazer cortes de cabelo, o décimo sai de graça!</p>
-                </div>
-
-                <div class="card-second">
-                    <p>ID: 124-537-835-230</p>
-                </div>
-
-                <div class="card-third">
-                    <div>
-                        <img src="assets/PinCheck.png" alt="" class="check">
-                    </div>
-                    <div>
-                        <img src="assets/PinCheck.png" alt="" class="check">
-                    </div>
-                    <div>
-                        <img src="assets/PinCheck.png" alt="" class="check">
-                    </div>
-                    <div>
-                        <img src="assets/PinCheck.png" alt="" class="check">
-                    </div>
-                    <div>
-                        <img src="assets/PinCheck.png" alt="" class="check">
-                    </div>
-                    <div>
-                        <img src="assets/PinCheck.png" alt="" class="check">
-                    </div>
-                    <div>
-                        <img src="assets/PinCheck.png" alt="" class="check">
-                    </div>
-                    <div>
-                        <!-- <img src="assets/PinCheck.png" alt="" class="check"> -->
-                    </div>
-                    <div>
-                        <!-- <img src="assets/PinCheck.png" alt="" class="check"> -->
-                    </div>
-                    <div>
-                        <img src="assets/Icons.png" alt="" class="gift">
-                    </div>
-                </div>
+                <!-- Cartões dinâmicos serão inseridos aqui -->
             </div>
         </section>
 
-        <section id="spin">
-            <div class="cont-spin">
-                <div>
-                    <h2>3</h2>
-                    <p>cortes restantes</p>
-                </div>
-                <div class="div-spin">
-                    <div class="barr-spin"></div>
-                    <span>7 de 10</span>
-                </div>
-            </div>
-            <div class="div-gift">
-                <img src="assets/PinGift.png" alt="" class="spin-gift">
-            </div>
+        <!-- Seção adicional (pode ser usada para outros conteúdos) -->
+        <section id="sec4">
         </section>
     </main>
+
+    <!-- Modal de promoção -->
+    <section class="container" aria-hidden="true">
+        <div class="modal">
+            <h1>PARABÉNS !!!</h1>
+            <p>Seu próximo corte é gratuito</p>
+            <button class="close-modal" onclick="closeModal()">Fechar</button>
+        </div>
+    </section>
+
     <script src="main.js"></script>
 </body>
+
 </html>

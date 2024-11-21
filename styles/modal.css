@@ -1,0 +1,62 @@
+ .container {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+
+ .show-modal {
+     padding: 10px 20px;
+     border: none;
+     background: #D658B3;
+     color: #fff;
+     border-radius: 5px;
+     font-size: 16px;
+     cursor: pointer;
+ }
+
+ .modal {
+     position: absolute;
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     width: 300px;
+     background: #fff;
+     padding: 20px;
+     border-radius: 10px;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -100%);
+     visibility: hidden;
+     opacity: 0;
+     transition: all 0.3s ease-in;
+
+     && h1 {
+         font: var(--title-sm);
+         color: var(--gray-600);
+     }
+
+     && p {
+         font: var(--text-sm);
+         color: var(--gray-500);
+     }
+
+     && button {
+         font: var(--text-sm);
+     }
+ }
+
+ .close-modal {
+     padding: 5px 15px;
+     border: none;
+     color: #fff;
+     background: #D658B3;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+ .container.active .modal {
+     visibility: visible;
+     opacity: 1;
+     transform: translate(-50%, -50%);
+ }
